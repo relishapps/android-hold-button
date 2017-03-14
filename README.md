@@ -20,33 +20,33 @@ app:cornerRadius="10”
 7) In you activity’s .java file, give the button callback method;
 ```java
 holdButton = (RMHoldButton) findViewById(R.id.holdButton);
-        holdButton.setmCallback(new RMHoldButton.RMHoldButtonProgressCallback() {
+holdButton.setmCallback(new RMHoldButton.RMHoldButtonProgressCallback() {
+    @Override
+    public void onError(int progress) {
+
+    }
+
+    @Override
+    public void onProgress(int progress) {
+
+    }
+
+    @Override
+    public void onFinish(int progress) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setMessage("Long press has finished!");
+        builder.setTitle("Complete!");
+        builder.setNegativeButton("Dismiss", new DialogInterface.OnClickListener() {
             @Override
-            public void onError(int progress) {
+            public void onClick(DialogInterface dialog, int which) {
 
-            }
-
-            @Override
-            public void onProgress(int progress) {
-
-            }
-
-            @Override
-            public void onFinish(int progress) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setMessage("Long press has finished!");
-                builder.setTitle("Complete!");
-                builder.setNegativeButton("Dismiss", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                    }
-                });
-
-                AlertDialog alertDialog = builder.create();
-                alertDialog.show();
             }
         });
+
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
+});
 ```
 
 For a full demo on how to use it, check out the Demo project.
