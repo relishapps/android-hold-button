@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RMHoldButton" >
+        <attr name="backgroundColor" format="color"/>
+        <attr name="animationDuration" format="integer"/>
+        <attr name="slideColor" format="color"/>
+        <attr name="slideTextColor" format="color"/>
+        <attr name="cornerRadius" format="integer"/>
+        <attr name="borderWidth" format="integer" />
+        <attr name="text" format="string"/>
+        <attr name="textColor" format="color"/>
+        <attr name="textSize" format="integer"/>
+    </declare-styleable>
+</resources>
