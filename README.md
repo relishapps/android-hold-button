@@ -4,9 +4,9 @@
 
 How to install RMHoldButton for Android
 
-1) Download RMHoldButton
+1) Clone or download this project
 2) In your Android Studio project, go to File -> New -> Import Module
-3) Navigate to the RMHoldButton directory you downloaded, and click OK
+3) Navigate to the `rmholdbutton` directory, and click OK
 4) In your app Gradle settings, add `compile project(':rmholdbutton’)`
 5) In your layout xml add `<io.relish.rmholdbutton.RMHoldButton>`
 6) Configure it using it’s custom properties;
@@ -16,7 +16,6 @@ app:text="Hold me!"
 app:animationDuration="2000"
 app:cornerRadius="10”
 ```
-
 7) In you activity’s .java file, give the button callback method;
 ```java
 holdButton = (RMHoldButton) findViewById(R.id.holdButton);
@@ -50,3 +49,6 @@ holdButton.setmCallback(new RMHoldButton.RMHoldButtonProgressCallback() {
 ```
 
 For a full demo on how to use it, check out the Demo project.
+
+## To do
+- Add RMHoldButton to Maven for easier install 
